@@ -34,6 +34,12 @@ SECRET_KEY = 'django-insecure-_w(y7j@44+nd*sp$75ez9v-sru^@n-z*d!b1_)nc+tcg@m*d-x
 DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "13.51.197.217",
+    "jobportal-ks.web.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
@@ -61,8 +67,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://jobportal-ks.web.app/",
+]
 
 ROOT_URLCONF = 'server.urls'
 
